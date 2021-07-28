@@ -9,17 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var assignmentItems =
-            [AssignmentItem(course: "Math", description: "Do algebra", dueDate: Date()),
-             AssignmentItem(course: "Science", description: "Do chemistry", dueDate: Date()),
-             AssignmentItem(course: "ELA", description: "Read", dueDate: Date())]
+        [AssignmentItem(course: "Math", description: "Do algebra", dueDate: Date()),
+         AssignmentItem(course: "Science", description: "Do chemistry", dueDate: Date()),
+         AssignmentItem(course: "ELA", description: "Read", dueDate: Date())]
     var body: some View {
         NavigationView {
             List {
                 ForEach(assignmentItems) { item in
-                                   Text(item.description)
-                                }
+                    HStack {
+                        VStack (alignment: .leading) {
+                            Text(item.course)
+                                .font(.headline)
+                            Text(item.description)
+                        }
+                        Spacer()
+                        Text(item.dueDate, style: .date)
+                    }
+                }
+                .onMove(perform: { indices, newOffset in
+                    assignmentItems.move(fromOffsets: indices, toOffset: newOffset)
+                })
+                .onDelete(perform: { indexSet in
+                    assignmentItems.remove(atOffsets: indexSet)
+                })
             }
-            .navigationTitle("Assignment Notebook")
+            .navigationBarTitle("Assignment Notebook", displayMode: .inline)
+            .navigationBarItems(leading: EditButton())
         }
     }
 }
