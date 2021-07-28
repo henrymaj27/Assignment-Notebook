@@ -13,8 +13,14 @@ struct ContentView: View {
              AssignmentItem(course: "Science", description: "Do chemistry", dueDate: Date()),
              AssignmentItem(course: "ELA", description: "Read", dueDate: Date())]
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(assignmentItems) { item in
+                                   Text(item.description)
+                                }
+            }
+            .navigationTitle("Assignment Notebook")
+        }
     }
 }
 
