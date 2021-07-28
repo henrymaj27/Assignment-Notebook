@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var assignmentItems =
-        [AssignmentItem(course: "Math", description: "Do algebra", dueDate: Date()),
-         AssignmentItem(course: "Science", description: "Do chemistry", dueDate: Date()),
-         AssignmentItem(course: "ELA", description: "Read", dueDate: Date())]
+    @ObservedObject var assignmentList = AssignmentList()
     var body: some View {
         NavigationView {
             List {
-                ForEach(assignmentItems) { item in
+                ForEach(assignmentList.items) { item in
                     HStack {
                         VStack (alignment: .leading) {
                             Text(item.course)
@@ -27,10 +24,10 @@ struct ContentView: View {
                     }
                 }
                 .onMove(perform: { indices, newOffset in
-                    assignmentItems.move(fromOffsets: indices, toOffset: newOffset)
+                    assignmentList.items.move(fromOffsets: indices, toOffset: newOffset)
                 })
                 .onDelete(perform: { indexSet in
-                    assignmentItems.remove(atOffsets: indexSet)
+                    assignmentList.items.remove(atOffsets: indexSet)
                 })
             }
             .navigationBarTitle("Assignment Notebook", displayMode: .inline)
