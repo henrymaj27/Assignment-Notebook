@@ -14,6 +14,7 @@
 		E1B38E0D26B1C4AF002447CE /* Assignment_NotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B38E0C26B1C4AF002447CE /* Assignment_NotebookTests.swift */; };
 		E1B38E1826B1C4AF002447CE /* Assignment_NotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B38E1726B1C4AF002447CE /* Assignment_NotebookUITests.swift */; };
 		E1B38E2826B1CCC3002447CE /* AssignmentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B38E2726B1CCC3002447CE /* AssignmentList.swift */; };
+		E1B38E2A26B1CF52002447CE /* AddAssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B38E2926B1CF52002447CE /* AddAssignmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E1B38E1726B1C4AF002447CE /* Assignment_NotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment_NotebookUITests.swift; sourceTree = "<group>"; };
 		E1B38E1926B1C4AF002447CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1B38E2726B1CCC3002447CE /* AssignmentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentList.swift; sourceTree = "<group>"; };
+		E1B38E2926B1CF52002447CE /* AddAssignmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				E1B38DFA26B1C4AE002447CE /* Assignment_NotebookApp.swift */,
 				E1B38DFC26B1C4AE002447CE /* ContentView.swift */,
+				E1B38E2926B1CF52002447CE /* AddAssignmentView.swift */,
 				E1B38E2726B1CCC3002447CE /* AssignmentList.swift */,
 				E1B38DFE26B1C4AF002447CE /* Assets.xcassets */,
 				E1B38E0326B1C4AF002447CE /* Info.plist */,
@@ -265,6 +268,7 @@
 				E1B38E2826B1CCC3002447CE /* AssignmentList.swift in Sources */,
 				E1B38DFD26B1C4AE002447CE /* ContentView.swift in Sources */,
 				E1B38DFB26B1C4AE002447CE /* Assignment_NotebookApp.swift in Sources */,
+				E1B38E2A26B1CF52002447CE /* AddAssignmentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
